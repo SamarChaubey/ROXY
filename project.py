@@ -47,12 +47,12 @@ greetings = [
 ]
 
 def listen_for_wake_word(source):
-    print("Listening for 'Hello'...")
+    print("Listening for 'Baymax'...")
     while True:
         audio = r.listen(source)
         try:
             text = r.recognize_google(audio)
-            if "hello" in text.lower():
+            if "baymax" in text.lower():
                 print("Wake word detected.")
                 engine.say(np.random.choice(greetings))
                 engine.runAndWait()
