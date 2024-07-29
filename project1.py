@@ -31,7 +31,8 @@ def generate_response(prompt):
                 messages=[
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=500
+                max_tokens=500,
+                temperature=0
             )
             return response['choices'][0]['message']['content'].strip()
         except RateLimitError:
@@ -72,7 +73,9 @@ def listen_and_respond(source):
                 continue
 
             # Generate a response using OpenAI
+            time.sleep(10)
             response_text = generate_response(text)
+            
             print(f"AI Response: {response_text}")
 
             # Speak the response

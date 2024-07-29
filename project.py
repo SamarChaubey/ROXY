@@ -24,7 +24,7 @@ def generate_response(prompt):
 
     try:
         outputs = model.generate(
-            inputs,
+            inputs,            
             max_length=300,
             num_return_sequences=1,
             pad_token_id=tokenizer.eos_token_id,
