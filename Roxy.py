@@ -4,7 +4,7 @@ import google.generativeai as gen_ai
 import re
 
 # Replace with your actual API key
-API_KEY = "AIzaSyDcrRJR6kpQ44S0dMkjGKQ6FtGCoBSxjLs"
+API_KEY = "USE YOUR API KEY"
 
 def init_speech():
     recognizer = sr.Recognizer()
